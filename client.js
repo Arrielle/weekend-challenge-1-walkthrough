@@ -13,6 +13,7 @@ $(document).ready(function(){ //Waits for DOM to load
       '<td>' + idNumber + '</td>' +
       '<td>' + jobTitle + '</td>' +
       '<td>' + annualSalary + '</td>' +
+      '<td><button class ="deleteButton">Delete ' + firstName + '</buton></td>' +
       '</tr>'
     );//ends append
     //Add monthly salary expenses to the DOM;
@@ -21,4 +22,10 @@ $(document).ready(function(){ //Waits for DOM to load
     var totalMonthlyExpenses = parseFloat(previousTotal) + newEmployee; //changes the original value in the monthly expenses to a number and adds that with the new employee
     $('#monthlyExpenses').text(totalMonthlyExpenses); //puts the previous var into the monthly expenses
   });// ends the onclick function
+  //starts new event listener on delete click
+  $('#employeeTableBody').on('click', '.deleteButton', function (){
+    $(this).parent().parent().remove();
+  });
+
+
 });//ends document.ready function
