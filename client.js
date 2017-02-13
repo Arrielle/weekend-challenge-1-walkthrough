@@ -28,9 +28,15 @@ $(document).ready(function(){ //Waits for DOM to load
     $('#monthlyExpenses').text(totalMonthlyExpenses); //puts the previous var into the monthly expenses
     $('.employeeFormInput').val(''); //clears out the input box
   });// ends the onclick function
-  
+
   //starts new event listener on delete click
   $('#employeeTableBody').on('click', '.deleteButton', function (){
+    var valueToRemove = $(this).parent().prev().text(); //finds the salary of the employee that's about to be deleted
+    var deletedMonthly = valueToRemove / 12; //one employees salary / 12
+    var previousTotal = $('#monthlyExpenses').text(); //finds the value already located in the monthly expenses ('0')
+    var newTotalMonthlyExpenses = previousTotal - deletedMonthly;
+    $('#monthlyExpenses').text(newTotalMonthlyExpenses);
+
     $(this).parent().parent().remove(); //removes the row that the delete button is tied to;
 
   });
