@@ -17,7 +17,7 @@ $(document).ready(function(){ //Waits for DOM to load
       '<td>' + idNumber + '</td>' +
       '<td>' + jobTitle + '</td>' +
       '<td>' + annualSalary + '</td>' +
-      '<td><button class ="deleteButton">Delete ' + firstName + '</buton></td>' +
+      '<td><button class ="deleteButton" data-salary = "' + annualSalary +'" >Delete ' + firstName + '</buton></td>' +
       '</tr>'
     );//ends append
 
@@ -31,7 +31,8 @@ $(document).ready(function(){ //Waits for DOM to load
 
   //starts new event listener on delete click
   $('#employeeTableBody').on('click', '.deleteButton', function (){
-    var valueToRemove = $(this).parent().prev().text(); //finds the salary of the employee that's about to be deleted
+    var valueToRemove = $(this).data('salary'); //finds the salary of the employee that's about to be deleted
+    //
     var deletedMonthly = valueToRemove / 12; //one employees salary / 12
     var previousTotal = $('#monthlyExpenses').text(); //finds the value already located in the monthly expenses ('0')
     var newTotalMonthlyExpenses = previousTotal - deletedMonthly;
