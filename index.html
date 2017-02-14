@@ -11,34 +11,36 @@
   <h1>Weekend 1 Walkthrough</h1>
   <!--New Employee Form -->
   <div id = employeeForm>
-    <label for="firstName">First Name</label>
-    <input id = firstName type="text" class = "employeeFormInput" name="firstName" value="" placeholder="First Name">
-    <label for="lastName">Last Name</label>
-    <input id = lastName type="text" class = "employeeFormInput" name="lastName" value="" placeholder="Last Name">
-    <label for="idNumber">ID Number</label>
-    <input id = idNumber type="number" class = "employeeFormInput" name="idNumber" value="" placeholder="ID Number">
-    <label for="jobTitle">Job Title</label>
-    <input id = jobTitle type="text" class = "employeeFormInput" name="jobTitle" value="" placeholder="Job Title">
-    <label for="annualSalary">Annual Salary</label>
-    <input id = annualSalary type="number" class = "employeeFormInput" name="annualSalary" value="" placeholder="Annual Salary">
-    <button id = submitButton type="button" name="submitButton">Submit</button>
+    <form>
+      <label for="firstName">First Name</label>
+      <input id = firstName type="text" class = "employeeFormInput" name="firstName" value="" placeholder="First Name">
+      <label for="lastName">Last Name</label>
+      <input id = lastName type="text" class = "employeeFormInput" name="lastName" value="" placeholder="Last Name">
+      <label for="idNumber">ID Number</label>
+      <input id = idNumber type="number" class = "employeeFormInput" name="idNumber" value="" placeholder="ID Number">
+      <label for="jobTitle">Job Title</label>
+      <input id = jobTitle type="text" class = "employeeFormInput" name="jobTitle" value="" placeholder="Job Title">
+      <label for="annualSalary">Annual Salary</label>
+      <input id = annualSalary type="number" class = "employeeFormInput" name="annualSalary" value="" placeholder="Annual Salary">
+      <button id = submitButton type="submit" name="submitButton">Submit</button>
+    </form>
   </div>
   <!-- Employee List -->
   <h1>Employee List</h1>
-    <table>
-      <thead>
-        <tr>
-          <th>First Name</th>
-          <th>Last Name</th>
-          <th>ID Number</th>
-          <th>Job Title</th>
-          <th>Annual Salary</th>
-          <th>Delete</th>
-        </tr>
-      </thead>
-      <tbody id = "employeeTableBody">
-      </tbody>
-    </table>
+  <table>
+    <thead>
+      <tr>
+        <th>First Name</th>
+        <th>Last Name</th>
+        <th>ID Number</th>
+        <th>Job Title</th>
+        <th>Annual Salary</th>
+        <th>Delete</th>
+      </tr>
+    </thead>
+    <tbody id = "employeeTableBody">
+    </tbody>
+  </table>
   <!-- Monthly salary expenditures -->
   <h3>Monthly Salary Expenditure: <span id = monthlyExpenses>0</span></h3>
 </body>
